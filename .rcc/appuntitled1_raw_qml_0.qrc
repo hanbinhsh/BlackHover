@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/untitled1/">
+    <file alias="main.qml">E:/windows/Documents/untitled1/main.qml</file>
+    <file alias="Hover.qml">E:/windows/Documents/untitled1/Hover.qml</file>
+  </qresource>
+</RCC>
+

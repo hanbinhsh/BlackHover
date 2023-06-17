@@ -1,0 +1,167 @@
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: E:/windows/Documents/build-untitled1-Desktop_Qt_6_6_0_MSVC2019_64bit-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~1/MIB055~1/2022/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_daff5 && [1/2] Building CXX object CMakeFiles\cmTC_daff5.dir\src.cxx.obj
+FAILED: CMakeFiles/cmTC_daff5.dir/src.cxx.obj 
+C:\PROGRA~1\MIB055~1\2022\VC\Tools\MSVC\1434~1.319\bin\HostX64\x64\cl.exe  /nologo /TP -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_daff5.dir\src.cxx.obj /FdCMakeFiles\cmTC_daff5.dir\ /FS -c E:\windows\Documents\build-untitled1-Desktop_Qt_6_6_0_MSVC2019_64bit-Release\CMakeFiles\CMakeTmp\src.cxx
+E:\windows\Documents\build-untitled1-Desktop_Qt_6_6_0_MSVC2019_64bit-Release\CMakeFiles\CMakeTmp\src.cxx(1): fatal error C1083: 无法打开包括文件: “pthread.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: E:/windows/Documents/build-untitled1-Desktop_Qt_6_6_0_MSVC2019_64bit-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~1/MIB055~1/2022/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_10654 && [1/2] Building CXX object CMakeFiles\cmTC_10654.dir\CheckFunctionExists.cxx.obj
+[2/2] Linking CXX executable cmTC_10654.exe
+FAILED: cmTC_10654.exe 
+cmd.exe /C "cd . && E:\tool\qt\Tools\CMake_64\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_10654.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100220~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100220~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\VC\Tools\MSVC\1434~1.319\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_10654.dir\CheckFunctionExists.cxx.obj  /out:cmTC_10654.exe /implib:cmTC_10654.lib /pdb:cmTC_10654.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\VC\Tools\MSVC\1434~1.319\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_10654.dir\CheckFunctionExists.cxx.obj /out:cmTC_10654.exe /implib:cmTC_10654.lib /pdb:cmTC_10654.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_10654.dir/intermediate.manifest CMakeFiles\cmTC_10654.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: 无法打开文件“pthreads.lib”
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: E:/windows/Documents/build-untitled1-Desktop_Qt_6_6_0_MSVC2019_64bit-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~1/MIB055~1/2022/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_4a7f5 && [1/2] Building CXX object CMakeFiles\cmTC_4a7f5.dir\CheckFunctionExists.cxx.obj
+[2/2] Linking CXX executable cmTC_4a7f5.exe
+FAILED: cmTC_4a7f5.exe 
+cmd.exe /C "cd . && E:\tool\qt\Tools\CMake_64\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_4a7f5.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100220~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100220~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\VC\Tools\MSVC\1434~1.319\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_4a7f5.dir\CheckFunctionExists.cxx.obj  /out:cmTC_4a7f5.exe /implib:cmTC_4a7f5.lib /pdb:cmTC_4a7f5.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\VC\Tools\MSVC\1434~1.319\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_4a7f5.dir\CheckFunctionExists.cxx.obj /out:cmTC_4a7f5.exe /implib:cmTC_4a7f5.lib /pdb:cmTC_4a7f5.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_4a7f5.dir/intermediate.manifest CMakeFiles\cmTC_4a7f5.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: 无法打开文件“pthread.lib”
+ninja: build stopped: subcommand failed.
+
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Microsoft Visual Studio/2022/VC/Tools/MSVC/14.34.31933/bin/HostX64/x64/cl.exe 
+Build flags: /DWIN32;/D_WINDOWS;/GR;/EHsc
+Id flags:  
+
+The output was:
+系统找不到指定的文件。
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Microsoft Visual Studio/2022/VC/Tools/MSVC/14.34.31933/bin/HostX64/x64/cl.exe 
+Build flags: /DWIN32;/D_WINDOWS;/GR;/EHsc
+Id flags: -c 
+
+The output was:
+系统找不到指定的文件。
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Microsoft Visual Studio/2022/VC/Tools/MSVC/14.34.31933/bin/HostX64/x64/cl.exe 
+Build flags: /DWIN32;/D_WINDOWS;/GR;/EHsc
+Id flags: --c++ 
+
+The output was:
+系统找不到指定的文件。
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Microsoft Visual Studio/2022/VC/Tools/MSVC/14.34.31933/bin/HostX64/x64/cl.exe 
+Build flags: /DWIN32;/D_WINDOWS;/GR;/EHsc
+Id flags: --ec++ 
+
+The output was:
+系统找不到指定的文件。
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Microsoft Visual Studio/2022/VC/Tools/MSVC/14.34.31933/bin/HostX64/x64/cl.exe 
+Build flags: /DWIN32;/D_WINDOWS;/GR;/EHsc
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+系统找不到指定的文件。
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Microsoft Visual Studio/2022/VC/Tools/MSVC/14.34.31933/bin/HostX64/x64/cl.exe 
+Build flags: /DWIN32;/D_WINDOWS;/GR;/EHsc
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+系统找不到指定的文件。
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Microsoft Visual Studio/2022/VC/Tools/MSVC/14.34.31933/bin/HostX64/x64/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+系统找不到指定的文件。
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Microsoft Visual Studio/2022/VC/Tools/MSVC/14.34.31933/bin/HostX64/x64/cl.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+系统找不到指定的文件。
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Microsoft Visual Studio/2022/VC/Tools/MSVC/14.34.31933/bin/HostX64/x64/cl.exe 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+系统找不到指定的文件。
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Microsoft Visual Studio/2022/VC/Tools/MSVC/14.34.31933/bin/HostX64/x64/cl.exe 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+系统找不到指定的文件。
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Microsoft Visual Studio/2022/VC/Tools/MSVC/14.34.31933/bin/HostX64/x64/cl.exe 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+系统找不到指定的文件。
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files/Microsoft Visual Studio/2022/VC/Tools/MSVC/14.34.31933/bin/HostX64/x64/cl.exe 
+Build flags: 
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+系统找不到指定的文件。
+
+
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":

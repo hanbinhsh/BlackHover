@@ -1,0 +1,14 @@
+-rootPath
+E:/windows/Documents/untitled1
+-cmake-output
+-output-file
+E:/windows/Documents/build-untitled1-Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.qt_plugins/Qt6_QmlPlugins_Imports_appuntitled1.cmake
+-importPath
+E:/windows/Documents/build-untitled1-Desktop_Qt_6_6_0_MSVC2019_64bit-Release/untitled1
+-importPath
+E:/windows/Documents/build-untitled1-Desktop_Qt_6_6_0_MSVC2019_64bit-Release
+-importPath
+E:/tool/qt/6.6.0/msvc2019_64/./qml
+-qrcFiles
+E:/windows/Documents/build-untitled1-Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmake_untitled1.qrc
+E:/windows/Documents/build-untitled1-Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/appuntitled1_raw_qml_0.qrc
